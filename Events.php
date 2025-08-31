@@ -9,7 +9,7 @@
 namespace humhub\modules\banner;
 
 use humhub\modules\banner\assets\BannerAssets;
-use humhub\modules\ui\view\components\View;
+use humhub\components\View;
 use Yii;
 use yii\base\Event;
 

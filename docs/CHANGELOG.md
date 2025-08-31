@@ -1,6 +1,10 @@
 Changelog
 =========
 
+1.2.0 (August 31, 2025)
+--------------------
+- Enh: Migration to Bootstrap 5 for HumHub 1.18
+
 1.1.1 (April 7, 2025)
 --------------------
 - Fix: Space menu on Enterprise theme

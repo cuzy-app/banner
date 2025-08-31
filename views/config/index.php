@@ -6,14 +6,14 @@
  * @author [Marc FARRE](https://marc.fun)
  */
 
-use humhub\libs\Html;
+use humhub\components\View;
+use humhub\helpers\Html;
 use humhub\modules\banner\models\Configuration;
 use humhub\modules\banner\Module;
-use humhub\modules\ui\form\widgets\ActiveForm;
 use humhub\modules\ui\form\widgets\CodeMirrorInputWidget;
-use humhub\modules\ui\view\components\View;
-use humhub\widgets\Button;
-use yii\bootstrap\Alert;
+use humhub\widgets\bootstrap\Alert;
+use humhub\widgets\bootstrap\Button;
+use humhub\widgets\form\ActiveForm;
 
 
 /**
@@ -30,13 +30,13 @@ $module = Yii::$app->getModule('banner');
     <div class="panel-heading">
         <strong><?= $module->getName() ?></strong>
 
-        <div class="help-block">
+        <div class="text-body-secondary">
             <?= $module->getDescription() ?>
         </div>
     </div>
 
     <div class="panel-body">
-        <div class="alert alert-info cuzy-free-module-info">
+        <div class="alert alert-info cuzy-free-module-info" role="alert">
             This module was created and is maintained by
             <a href="https://www.cuzy.app/"
                target="_blank">CUZY.APP (view other modules)</a>.
@@ -53,10 +53,7 @@ $module = Yii::$app->getModule('banner');
         </div>
 
         <?php if ($isActiveEvent): ?>
-            <?= Alert::widget([
-                'body' => Yii::t('BannerModule.config', 'An event has been detected. This configuration may be overridden by the event.'),
-                'options' => ['class' => 'alert-danger'],
-            ]) ?>
+            <?= Alert::danger(Yii::t('BannerModule.config', 'An event has been detected. This configuration may be overridden by the event.')) ?>
         <?php endif; ?>
 
         <?php $form = ActiveForm::begin(['acknowledge' => true]); ?>
@@ -68,8 +65,8 @@ $module = Yii::$app->getModule('banner');
         <?php $example = '<style>
     :root {
         --hh-banner-height: 60px; /** default 40px */
-        --hh-banner-font-color: var(--text-color-contrast); /** default var(--text-color-contrast) */
-        --hh-banner-bg-color: var(--danger); /** default var(--info) */
+        --hh-banner-font-color: var(--hh-text-color-contrast); /** default var(--hh-text-color-contrast) */
+        --hh-banner-bg-color: var(--bs-danger); /** default var(--bs-info) */
     }
 </style>'; ?>
 

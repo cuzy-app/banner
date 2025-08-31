@@ -12,14 +12,14 @@
  * @var $closeButton bool
  */
 
-use humhub\libs\Html;
-use humhub\modules\ui\view\components\View;
+use humhub\components\View;
+use humhub\helpers\Html;
 
 ?>
 
 <div id="banner">
     <?php if ($closeButton): ?>
-        <button id="banner-close" type="button" class="close">×</button>
+        <button id="banner-close" type="button">×</button>
     <?php endif; ?>
     <div id="banner-container">
         <div id="banner-content">

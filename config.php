@@ -9,7 +9,7 @@
 namespace humhub\modules\banner\Events;
 use humhub\modules\banner\Events;
 use humhub\modules\banner\Module;
-use humhub\modules\ui\view\components\View;
+use humhub\components\View;
 
 return [
     'id' => 'banner',

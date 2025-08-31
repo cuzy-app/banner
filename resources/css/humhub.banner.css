@@ -1,7 +1,7 @@
 :root {
     --hh-banner-height: 40px;
-    --hh-banner-font-color: var(--text-color-contrast);
-    --hh-banner-bg-color: var(--info);
+    --hh-banner-font-color: var(--hh-text-color-contrast);
+    --hh-banner-bg-color: var(--bs-info);
 }
 
 #banner {
@@ -28,9 +28,15 @@
 #banner-close {
     color: var(--hh-banner-font-color);
     opacity: 0.7;
-    padding-left: 15px;
+    background: none;
+    padding: 0 0 0 15px;
+    border: 0;
     height: var(--hh-banner-height);
     display: block;
+    float: right;
+    font-size: 21px;
+    font-weight: 700;
+    text-shadow: 0 1px 0 var(--hh-banner-font-color);
 }
 
 #banner-content {
@@ -57,24 +63,6 @@
 @keyframes scroll-text {
     0% { transform: translateX(15%); }
     100% { transform: translateX(-50%); }
-}
-
-/* TODO Remove this CSS when using Bootstrap 5 on HumHub 1.18 */
-#banner .btn-outlined {
-    background-color: transparent;
-    border: 1px solid var(--text-color-contrast);
-    color: var(--text-color-contrast) !important;
-    font-weight: normal;
-    padding: 2px 8px;
-    margin-top: -3px;
-    font-size: var(--hh-ct-font-size, 1rem);
-}
-#banner .btn-outlined:hover,
-#banner .btn-outlined:focus,
-#banner .btn-outlined:active {
-    background-color: var(--link);
-    color: var(--text-color-contrast);
-    border-color: var(--link);
 }
 
 @media screen and (max-width: 430px) {
