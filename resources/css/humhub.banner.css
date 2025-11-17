@@ -1,6 +1,6 @@
 :root {
     --hh-banner-height: 40px;
-    --hh-banner-font-color: var(--hh-text-color-contrast);
+    --hh-banner-font-color: var(--hh-info-contrast);
     --hh-banner-bg-color: var(--bs-info);
 }
 
