@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Banner
  * @link https://www.cuzy.app
