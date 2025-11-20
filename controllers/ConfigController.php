@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Banner
  * @link https://www.cuzy.app
@@ -26,8 +27,8 @@ class ConfigController extends Controller
         $model->loadBySettings();
 
         $configurationWithEvent = $module->getConfiguration();
-        $isActiveEvent =
-            $configurationWithEvent->enabled !== $model->enabled
+        $isActiveEvent
+            = $configurationWithEvent->enabled !== $model->enabled
             || $configurationWithEvent->content !== $model->content;
 
         if ($model->load(Yii::$app->request->post()) && $model->validate() && $model->save()) {

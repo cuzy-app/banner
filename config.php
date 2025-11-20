@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Banner
  * @link https://www.cuzy.app
@@ -7,6 +8,7 @@
  */
 
 namespace humhub\modules\banner\Events;
+
 use humhub\modules\banner\Events;
 use humhub\modules\banner\Module;
 use humhub\components\View;
