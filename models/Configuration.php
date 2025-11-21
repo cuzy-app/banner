@@ -71,8 +71,8 @@ class Configuration extends Model
 
         $this->settingsManager->set('enabled', $this->enabled);
         $this->settingsManager->set('closeButton', $this->closeButton);
-        $this->settingsManager->set('content', trim($this->content));
-        $this->settingsManager->set('contentGuests', trim($this->contentGuests));
+        $this->settingsManager->set('content', trim((string) $this->content));
+        $this->settingsManager->set('contentGuests', trim((string) $this->contentGuests));
 
         return true;
     }
