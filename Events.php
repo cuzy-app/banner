@@ -9,8 +9,9 @@
 
 namespace humhub\modules\banner;
 
-use humhub\modules\banner\assets\BannerAssets;
 use humhub\components\View;
+use humhub\helpers\Html;
+use humhub\modules\banner\assets\BannerAssets;
 use Yii;
 use yii\base\Event;
 
@@ -35,6 +36,8 @@ class Events
         if (empty($content)) {
             return;
         }
+
+        $content = str_ireplace('<script>', '<script ' . Html::nonce() . '>', $content);
 
         /** @var View $view */
         $view = $event->sender;

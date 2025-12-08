@@ -1,6 +1,10 @@
 Changelog
 =========
 
+1.2.1 (December 8, 2025)
+--------------------
+- Enh #4: Allow `<script>` tag for system administrators 
+
 1.2.0 (August 31, 2025)
 --------------------
 - Enh: Migration to Bootstrap 5 for HumHub 1.18

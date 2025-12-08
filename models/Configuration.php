@@ -69,6 +69,14 @@ class Configuration extends Model
             return false;
         }
 
+        if (!Yii::$app->user->isAdmin()) {
+            $this->content = str_ireplace(
+                ['<script>', '</script>'],
+                [' - script-allowed-for-sys-admin-only - ', ' - /script-allowed-for-sys-admin-only - '],
+                $this->content,
+            );
+        }
+
         $this->settingsManager->set('enabled', $this->enabled);
         $this->settingsManager->set('closeButton', $this->closeButton);
         $this->settingsManager->set('content', trim((string) $this->content));
