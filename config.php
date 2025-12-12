@@ -21,7 +21,7 @@ return [
         [
             'class' => View::class,
             'event' => View::EVENT_BEGIN_BODY,
-            'callback' => [Events::class, 'onViewBeginBody'],
+            'callback' => Events::onViewBeginBody(...),
         ],
     ],
 ];
