@@ -18,7 +18,7 @@ If it's useful to you, please consider [making a donation](https://www.cuzy.app/
 
 ## Repository
 
-https://github.com/cuzy-app/clean-theme
+https://github.com/cuzy-app/banner
 
 ## Publisher
 
