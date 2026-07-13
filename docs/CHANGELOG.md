@@ -1,6 +1,10 @@
 Changelog
 =========
 
+1.3.0 (Unreleased)
+------------------
+- Fix: Compatibility with HumHub 1.19
+
 1.2.1 (December 8, 2025)
 --------------------
 - Enh #4: Allow `<script>` tag for system administrators 
