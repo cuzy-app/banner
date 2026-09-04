@@ -32,6 +32,11 @@ class Events
         }
 
         $closeButton = $configuration->closeButton;
+
+        if ($closeButton && $module->isClosedInSession()) {
+            return;
+        }
+
         $content = Yii::$app->user->isGuest ? $configuration->contentGuests : $configuration->content;
         if (empty($content)) {
             return;

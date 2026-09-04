@@ -2,6 +2,7 @@
     --hh-banner-height: 40px;
     --hh-banner-font-color: var(--hh-info-contrast);
     --hh-banner-bg-color: var(--bs-info);
+    --hh-banner-close-size: 40px;
 }
 
 #banner {
@@ -14,7 +15,7 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    padding: 0 15px;
+    padding: 0 var(--hh-banner-close-size);
     text-align: center;
     background-color: var(--hh-banner-bg-color);
     color: var(--hh-banner-font-color);
@@ -26,17 +27,31 @@
 }
 
 #banner-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    box-sizing: border-box;
+    width: var(--hh-banner-close-size);
+    height: var(--hh-banner-height);
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    cursor: pointer;
+    background-color: var(--hh-banner-bg-color);
     color: var(--hh-banner-font-color);
     opacity: 0.7;
-    background: none;
-    padding: 0 0 0 15px;
-    border: 0;
-    height: var(--hh-banner-height);
-    display: block;
-    float: right;
     font-size: 21px;
     font-weight: 700;
-    text-shadow: 0 1px 0 var(--hh-banner-font-color);
+    line-height: 1;
+    transition: opacity 0.15s ease-in-out;
+}
+
+#banner-close:hover,
+#banner-close:focus-visible {
+    opacity: 1;
 }
 
 #banner-content {
@@ -56,8 +71,15 @@
     animation-play-state: paused;
 }
 
-#banner.scrolling #banner-close {
-    display: none;
+#banner.scrolling #banner-close::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 100%;
+    width: 24px;
+    height: 100%;
+    pointer-events: none;
+    background: linear-gradient(to right, transparent, var(--hh-banner-bg-color));
 }
 
 @keyframes scroll-text {
@@ -70,7 +92,12 @@
     #banner button {
         font-size: 14px !important;
     }
+
+    :root {
+        --hh-banner-close-size: 32px;
+    }
 }
+
 
 body {
     padding-top: calc(var(--hh-banner-height) + var(--hh-fixed-header-height, 0px));

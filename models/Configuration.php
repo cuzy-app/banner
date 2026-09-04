@@ -50,6 +50,7 @@ class Configuration extends Model
     {
         $contentHint = Yii::t('BannerModule.config', 'If the content is empty, the banner will not be displayed.');
         return [
+            'closeButton' => Yii::t('BannerModule.config', 'Once closed, the banner stays hidden for the rest of the session.'),
             'content' => $contentHint,
             'contentGuests' => $contentHint,
         ];
