@@ -1,6 +1,15 @@
 Changelog
 =========
 
+1.3.1 (September 4, 2026)
+------------------
+- Fix #12: Once closed, the banner stays hidden for the rest of the session
+- Fix #13: When the text is too long and scrolling, banner lacks close button
+
+1.3.0 (July 16, 2026)
+------------------
+- Fix: Compatibility with HumHub 1.19
+
 1.2.1 (December 8, 2025)
 --------------------
 - Enh #4: Allow `<script>` tag for system administrators 

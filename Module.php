@@ -25,11 +25,32 @@ class Module extends \humhub\components\Module
     public const EVENT_AFTER_GET_CONFIGURATION = 'afterGetBannerConfiguration';
 
     /**
+     * @var string session key used to remember that the banner has been closed
+     */
+    public const SESSION_KEY_CLOSED = 'banner.closed';
+
+    /**
      * @var string defines the icon
      */
     public $icon = 'exclamation-triangle';
 
     private ?Configuration $_configuration = null;
+
+    /**
+     * @return bool whether the banner has been closed during the current session
+     */
+    public function isClosedInSession(): bool
+    {
+        return (bool)Yii::$app->session->get(self::SESSION_KEY_CLOSED, false);
+    }
+
+    /**
+     * Remembers that the banner has been closed, for the rest of the session
+     */
+    public function closeInSession(): void
+    {
+        Yii::$app->session->set(self::SESSION_KEY_CLOSED, true);
+    }
 
     public function getConfiguration(): Configuration
     {

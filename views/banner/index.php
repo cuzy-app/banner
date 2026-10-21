@@ -13,13 +13,15 @@
  */
 
 use humhub\components\View;
-use humhub\helpers\Html;
+use yii\helpers\Url;
 
 ?>
 
 <div id="banner">
     <?php if ($closeButton): ?>
-        <button id="banner-close" type="button">×</button>
+        <button id="banner-close" type="button"
+                data-action-click="banner.close"
+                data-action-url="<?= Url::to(['/banner/banner/close']) ?>">×</button>
     <?php endif; ?>
     <div id="banner-container">
         <div id="banner-content">
@@ -27,14 +29,3 @@ use humhub\helpers\Html;
         </div>
     </div>
 </div>
-
-<script <?= Html::nonce() ?>>
-    $(function () {
-        <?php if ($closeButton): ?>
-        $('#banner-close').on('click', function () {
-            $('#banner').hide();
-            $(':root').css('--hh-banner-height', '0px');
-        });
-        <?php endif; ?>
-    });
-</script>

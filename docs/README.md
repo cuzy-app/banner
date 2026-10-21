@@ -8,6 +8,8 @@ Displays a custom HTML code at the top of the page to logged-in users and/or vis
 
 The HTML code can be customized in the module configuration or programmatically from another module via the `Module::EVENT_AFTER_GET_CONFIGURATION` event.
 
+An optional close button can be enabled: once closed, the banner stays hidden for the rest of the user session.
+
 Compatible with the HumHub, Enterprise and Clean themes.
 
 ## Pricing
