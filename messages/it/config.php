@@ -1,7 +1,7 @@
 <?php
 return [
   'An event has been detected. This configuration may be overridden by the event.' => 'È stato rilevato un evento. Questa configurazione potrebbe essere sovrascritta dall\'evento.',
-  'Banner content for logged-in users (HTML)' => 'Contenuto del banner per gli utenti registrati (HTML)',
+  'Banner content for logged-in users (HTML)' => 'Contenuto del banner per gli utenti connessi (HTML)',
   'Banner content for visitors / logged-out users (HTML)' => 'Contenuto del banner per i visitatori/utenti disconnessi (HTML)',
   'Close button' => 'Pulsante Chiudi',
   'Enabled' => 'Abilitato',
